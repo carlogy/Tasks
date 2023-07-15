@@ -1,18 +1,13 @@
 import React from 'react';
 import Taskform from './Taskform';
 import Tasks from './Tasks';
+import tasks from './TasksList';
 
 
 
 function Body() {
 
-  const tasks = [{
-    id: 'e1',
-    title: "Task 1",
-    notes: "Welcome to your task manager",
-    percent: "",
-  }
-]
+
 
   return (
 

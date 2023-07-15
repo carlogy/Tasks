@@ -1,13 +1,14 @@
 
 import React from 'react';
 import { useState } from 'react';
+import tasks from './TasksList';
 
 
 const Taskform = () => {
 
   const [userInput, setUserInput] = useState({
     enteredTitle: '',
-    enteredNotes: '',
+    // enteredNotes: '',
     enteredPercentage: 0,
   });
 
@@ -21,12 +22,12 @@ const titleHandler = (event) => {
 
 }
 
-const noteHandler =  (event) => {
-   setUserInput({
-    ...userInput,
-    enteredNotes: event.target.value,
-   })
-}
+// const noteHandler =  (event) => {
+//    setUserInput({
+//     ...userInput,
+//     enteredNotes: event.target.value,
+//    })
+// }
 
 const percentHandler = (event) => {
   setUserInput({
@@ -38,59 +39,76 @@ const percentHandler = (event) => {
 const submitHandler = (event) => {
   event.preventDefault();
 
+  const id = tasks[tasks.length];
+
   const taskData = {
+
+    id: id,
     title: userInput.enteredTitle,
-    notes: userInput.enteredNotes,
+    // notes: userInput.enteredNotes,
     percentComplete: userInput.enteredPercentage,
   };
 
+  tasks.push(taskData);
+
   console.log(taskData);
+
+  console.log(tasks);
+
   setUserInput({
     ...userInput,
     enteredTitle: "",
-    enteredNotes: "",
+    // enteredNotes: "",
     enteredPercentage: 0,
+
+
   });
   };
 
 
 
   return (
-    <div className=' flex-row text-center'>
-        <form onSubmit={submitHandler}>
-            <div className='inline-flex'>
-            <label for='task' >Task Name: </label>
+    <div className=' bg-blue-600 border border-blue-600 text-white rounded '>
+        <form onSubmit={submitHandler}
+        className='container mx-auto flex m-1'>
+            <div className='flex-auto'>
+            <label>Task Name: </label>
             <input type='text'
                   id='task'
                   value={userInput.enteredTitle}
                   autoComplete='off'
                   onChange={titleHandler}
-                  className='border border-solid rounded border-blue-600'
+                  className='border border-solid rounded border-white ml-1s text-black hover:border-blue-700 px-1 mt-1'
                   />
             </div>
-            <div className='inline-flex'>
-                <label for='notes' >Notes:</label>
+            {/* <div className='flex-auto '>
+                <label>Notes:</label>
                 <input type='text'
                         id='notes'
                         autoComplete='off'
                         value={userInput.enteredNotes}
                         onChange={noteHandler}
-                        className='border border-solid rounded' />
-            </div>
-            <div className='inline-flex'>
-            <label for='percent' >Percentage completed: </label>
+                        className='border border-solid rounded ml-1 text-black  hover:border-blue-700 hover:transition-shadow px-1s' />
+            </div> */}
+            <div className='flex-auto '>
+            <label>Percentage completed: </label>
             <input type='range'
                    id='percent'
                    value={userInput.enteredPercentage}
                     min={0}
                     max={100}
                     step={25}
-                    on onChange={percentHandler} />
+                    on onChange={percentHandler}
+                    className='ml-1 hover:transition-shadow px-1'
+                    />
+          </div>
+          <div className='rounded text-center  bg-white border border-white text-blue-600 m-2  flex-auto'>
+            <button  type='submit'
+            className='font-bold hover:text-blue-800'>Add Task</button>
             </div>
-            <div className='rounded  bg-blue-600 border border-blue-600 text-white'>
-            <button type='submit' >Add Task</button>
-            </div>
+
         </form>
+
     </div>
   )
 }
