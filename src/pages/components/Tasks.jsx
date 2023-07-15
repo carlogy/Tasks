@@ -3,6 +3,7 @@ import Card from './Card';
 import TaskItem from './TaskItem';
 import ListHeader from './ListHeader'
 
+
 const Tasks = (props) => {
 
 
@@ -16,8 +17,8 @@ const Tasks = (props) => {
             percent={props.items?.[0].percent}
          />
          <TaskItem
-            title={props.items[1].title}
-            percent={props.items[1].percent} />
+            title={props.items?.[1].title}
+            percent={props.items?.[1].percent} />
 
         </Card>
     )
