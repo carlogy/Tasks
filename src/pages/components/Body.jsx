@@ -1,7 +1,7 @@
 import React from 'react';
 import Taskform from './Taskform';
 import Tasks from './Tasks';
-import tasks from './TasksList';
+import tasks from '../../TasksList';
 
 
 

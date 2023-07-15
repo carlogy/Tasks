@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useState } from 'react';
-import tasks from './TasksList';
+import tasks from '../../TasksList';
 
 
 const Taskform = () => {
