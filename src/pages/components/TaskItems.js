@@ -19,9 +19,9 @@ let items = []
     }
 
 
-
+const listItems = [item1, item2, item3];
 
     return (
-     item1, item2, item3
+     listItems
     );
 }
