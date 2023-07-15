@@ -13,9 +13,9 @@ const Tasks = (props) => {
         <h3 className='mx-auto'>Percentage completed</h3>
         </div>
         <TaskItem
-            title={props.items[0].title}
-            notes={props.items[0].notes}
-            percent={props.items[0].percent}
+            title={props.items?.[0].title}
+            notes={props.items?.[0].notes}
+            percent={props.items?.[0].percent}
          />
 
         </Card>
