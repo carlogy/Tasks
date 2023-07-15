@@ -1,20 +1,29 @@
 import React from 'react';
 import Taskform from './Taskform';
+import Tasks from './Tasks';
+
 
 
 function Body() {
 
+  const tasks = [{
+    id: 'e1',
+    title: "Task 1",
+    notes: "Welcome to your task manager",
+    percent: "0",
+  }
+]
+
   return (
 
     <div className='container mx-auto  border border-solid rounded-lg border-blue-600   border-blue-600 '>
-    <div className='flex mx-auto text-center'>
-    <h3 className='mx-auto'>Task Name</h3>
-    <h3 className='mx-auto'>Description</h3>
-    <h3 className='mx-auto'>Percentage completed</h3>
+      <Taskform  />
+
+      <Tasks items={tasks} />
     </div>
 
-    <Taskform />
-    </div>
+
+
 
 
 
