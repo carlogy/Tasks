@@ -10,7 +10,7 @@ function Body() {
     id: 'e1',
     title: "Task 1",
     notes: "Welcome to your task manager",
-    percent: "0",
+    percent: "",
   }
 ]
 
