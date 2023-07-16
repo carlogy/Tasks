@@ -36,14 +36,14 @@ const percentHandler = (event) => {
   })
 }
 
+
 const submitHandler = (event) => {
   event.preventDefault();
 
-  const id = tasks[tasks.length];
+
 
   const taskData = {
-
-    id: id,
+    // id: id,
     title: userInput.enteredTitle,
     // notes: userInput.enteredNotes,
     percentComplete: userInput.enteredPercentage,

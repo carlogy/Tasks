@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Card from "./Card";
+import tasks from "@/TasksList";
+
 
 
 const TaskItem = (props) => {
@@ -19,7 +21,7 @@ return (
         {/* <div className='mx-auto'>
             <h2>{props.notes}</h2>
         </div> */}
-        <div className='flex-auto'        >
+        <div className='flex-auto'>
             <h2 onClick={clickHandler}
             >{percent}%</h2>
         </div>

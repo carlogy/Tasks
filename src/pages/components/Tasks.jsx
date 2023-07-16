@@ -2,24 +2,28 @@ import React, { useState } from "react";
 import Card from './Card';
 import TaskItem from './TaskItem';
 import ListHeader from './ListHeader'
+import tasks from "@/TasksList";
+
+
+
 
 
 const Tasks = (props) => {
 
 
+
     return (
         <Card>
+         <ListHeader />
 
-        <ListHeader />
-        <TaskItem
-            title={props.items?.[0].title}
-            // notes={props.items?.[0].notes}
-            percent={props.items?.[0].percent}
-         />
-         <TaskItem
-            title={props.items?.[1].title}
-            percent={props.items?.[1].percent} />
 
+         {tasks.map((item) => (
+            <TaskItem
+                key={item.id}
+                title={item.title}
+                percent={item.percent} />
+         )
+         )}
         </Card>
     )
 }
