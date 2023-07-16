@@ -11,7 +11,7 @@ const tasks = [{
     percent: 0,
   },
   {
-
+    id: 2,
     title: "This is 3rd todo",
     percent: 25,
   }

@@ -4,15 +4,13 @@ import { useState } from 'react';
 import tasks from '../../TasksList';
 
 
-const Taskform = () => {
+const Taskform = (props) => {
 
   const [userInput, setUserInput] = useState({
     enteredTitle: '',
     // enteredNotes: '',
     enteredPercentage: 0,
   });
-
-
 
 const titleHandler = (event) => {
 
@@ -36,24 +34,30 @@ const percentHandler = (event) => {
   })
 }
 
+// const [taskList , updateTaskList] = useState({});
+
 
 const submitHandler = (event) => {
   event.preventDefault();
 
-
-
-  const taskData = {
-    // id: id,
+   const taskData = {
+    id: Math.floor(Math.random() * 100),
     title: userInput.enteredTitle,
     // notes: userInput.enteredNotes,
     percentComplete: userInput.enteredPercentage,
   };
 
-  tasks.push(taskData);
 
-  console.log(taskData);
+  // const taskHandler = (tasks) => {
+  //   updateTaskList({
+  //     ...tasks,
+  //     taskData,
 
-  console.log(tasks);
+  //   })
+  // }
+
+
+  props.onSaveTaskData(taskData);
 
   setUserInput({
     ...userInput,
@@ -61,24 +65,31 @@ const submitHandler = (event) => {
     // enteredNotes: "",
     enteredPercentage: 0,
 
-
   });
   };
 
-
-
   return (
-    <div className=' bg-blue-600 border border-blue-600 text-white rounded '>
+    <div className=' bg-blue-600 border
+                    border-blue-600
+                    text-white rounded '>
         <form onSubmit={submitHandler}
         className='container mx-auto flex m-1'>
             <div className='flex-auto'>
-            <label>Task Name: </label>
+            <label className='pl-2'
+            >Task Name: </label>
             <input type='text'
                   id='task'
                   value={userInput.enteredTitle}
                   autoComplete='off'
                   onChange={titleHandler}
-                  className='border border-solid rounded border-white ml-1s text-black hover:border-blue-700 px-1 mt-1'
+                  className='border
+                             border-solid
+                             rounded
+                           border-white ml-1s
+                           text-black
+                           hover:border-blue-700
+                           px-1
+                           mt-1'
                   />
             </div>
             {/* <div className='flex-auto '>
@@ -90,8 +101,9 @@ const submitHandler = (event) => {
                         onChange={noteHandler}
                         className='border border-solid rounded ml-1 text-black  hover:border-blue-700 hover:transition-shadow px-1s' />
             </div> */}
-            <div className='flex-auto '>
-            <label>Percentage completed: </label>
+            <div className='flex-auto pt-1 '>
+            <label className='align-middle'
+            >Percentage completed: </label>
             <input type='range'
                    id='percent'
                    value={userInput.enteredPercentage}
@@ -99,10 +111,15 @@ const submitHandler = (event) => {
                     max={100}
                     step={25}
                     on onChange={percentHandler}
-                    className='ml-1 hover:transition-shadow px-1'
+                    className='ml-1 hover:transition-shadow align-middle'
                     />
           </div>
-          <div className='rounded text-center  bg-white border border-white text-blue-600 m-2  flex-auto'>
+          <div className='rounded text-center
+                         bg-white border
+                         border-white
+                         text-blue-600
+                         m-2
+                         flex-auto pr-2'>
             <button  type='submit'
             className='font-bold hover:text-blue-800'>Add Task</button>
             </div>

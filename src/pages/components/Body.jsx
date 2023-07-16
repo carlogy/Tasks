@@ -7,12 +7,19 @@ import tasks from '@/TasksList';
 
 function Body() {
 
-
+  const saveTaskDataHandler = (enteredTaskData) => {
+    const taskData = {
+      ...enteredTaskData,
+    };
+    console.log(taskData);
+  };
 
   return (
 
-    <div className='container mx-auto  border border-solid rounded-lg border-blue-600   border-blue-600 '>
-      <Taskform  />
+    <div className='container mx-auto'>
+      <Taskform
+        onSaveTaskData = {saveTaskDataHandler}
+        />
 
       <Tasks items={tasks} />
     </div>

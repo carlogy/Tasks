@@ -14,15 +14,17 @@ const TaskItem = (props) => {
 
 return (
     <Card>
-        <div className='flex text-center  text-blue-600 mt-4'>
-        <div className='flex-auto'>
-            <h2>{props.title}</h2>
+        <div className='flex  text-blue-600 mt-4'>
+        <div className='flex-1 text-left'>
+            <h2 className="pl-2"
+            >{props.title}</h2>
         </div>
         {/* <div className='mx-auto'>
             <h2>{props.notes}</h2>
         </div> */}
-        <div className='flex-auto'>
-            <h2 onClick={clickHandler}
+        <div className='flex-auto text-center'>
+            <h2 className='pr-2'
+             onClick={clickHandler}
             >{percent}%</h2>
         </div>
         </div>
