@@ -1,17 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Taskform from './Taskform';
 import Tasks from './Tasks';
-import tasks from '@/TasksList';
+
+import Initial_tasks from '@/TasksList';
 
 
 
-function Body() {
+function Body(props) {
 
-  const saveTaskDataHandler = (enteredTaskData) => {
-    const taskData = {
-      ...enteredTaskData,
-    };
-    console.log(taskData);
+  const [tasks, setTasks] = useState(Initial_tasks);
+
+  const saveTaskDataHandler = (task) => {
+    setTasks((prevTasks) => {
+      console.log("prevTasks:" ,prevTasks);
+      console.log("task", task);
+      return[...prevTasks, task];
+    });
   };
 
   return (

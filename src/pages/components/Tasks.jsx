@@ -15,15 +15,12 @@ const Tasks = (props) => {
     return (
         <Card>
          <ListHeader />
-
-
-         {tasks.map((item) => (
+         {props.items.map(task => (
             <TaskItem
-                key={item.id}
-                title={item.title}
-                percent={item.percent} />
-         )
-         )}
+                key={task.id}
+                title={task.title}
+                percent={task.percent} />
+         ))}
         </Card>
     )
 }

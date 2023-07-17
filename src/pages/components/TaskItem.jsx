@@ -8,12 +8,12 @@ const TaskItem = (props) => {
 
     const [percent, setPercent] = useState(props.percent);
 
-    const clickHandler = () => {
+    const clickHandler = (event) => {
         setPercent('Updated');
     };
 
 return (
-    <Card>
+
         <div className='flex  text-blue-600 mt-4'>
         <div className='flex-1 text-left'>
             <h2 className="pl-2"
@@ -28,7 +28,7 @@ return (
             >{percent}%</h2>
         </div>
         </div>
-    </Card>
+
 );
 }
 

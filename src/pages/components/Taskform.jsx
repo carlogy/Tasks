@@ -14,8 +14,8 @@ const Taskform = (props) => {
 
 const titleHandler = (event) => {
 
-  setUserInput((prevState) => {
-    return {...prevState, enteredTitle: event.target.value};
+  setUserInput((prevUserInput) => {
+    return {...prevUserInput, enteredTitle: event.target.value};
   });
 
 }
@@ -28,11 +28,10 @@ const titleHandler = (event) => {
 // }
 
 const percentHandler = (event) => {
-  setUserInput({
-    ...userInput,
-    enteredPercentage: event.target.value,
-  })
-}
+  setUserInput((prevUserInput) => {
+    return {...prevUserInput, enteredPercentage: event.target.value}
+  });
+};
 
 // const [taskList , updateTaskList] = useState({});
 
@@ -44,7 +43,7 @@ const submitHandler = (event) => {
     id: Math.floor(Math.random() * 100),
     title: userInput.enteredTitle,
     // notes: userInput.enteredNotes,
-    percentComplete: userInput.enteredPercentage,
+    percent: userInput.enteredPercentage,
   };
 
 
@@ -52,7 +51,6 @@ const submitHandler = (event) => {
   //   updateTaskList({
   //     ...tasks,
   //     taskData,
-
   //   })
   // }
 
@@ -77,7 +75,8 @@ const submitHandler = (event) => {
             <div className='flex-auto'>
             <label className='pl-2'
             >Task Name: </label>
-            <input type='text'
+            <input
+                  type='text'
                   id='task'
                   value={userInput.enteredTitle}
                   autoComplete='off'

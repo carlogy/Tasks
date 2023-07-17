@@ -1,6 +1,6 @@
 
 
-const tasks = [{
+const Initial_tasks = [{
     id: 0,
     title: "Welcome to your task manager!",
     percent: 0,
@@ -18,4 +18,4 @@ const tasks = [{
 ]
 
 
-export default tasks;
+export default Initial_tasks;
