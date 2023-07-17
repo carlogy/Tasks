@@ -6,7 +6,7 @@ import tasks from "@/TasksList";
 
 const TaskItem = (props) => {
 
-    const [percent, setPercent] = useState(props.percent);
+    const [percent, setPercent] = useState(props.percent.toString());
 
     const clickHandler = (event) => {
         setPercent('Updated');

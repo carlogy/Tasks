@@ -109,7 +109,7 @@ const submitHandler = (event) => {
                     min={0}
                     max={100}
                     step={25}
-                    on onChange={percentHandler}
+                    onChange={percentHandler}
                     className='ml-1 hover:transition-shadow align-middle'
                     />
           </div>
