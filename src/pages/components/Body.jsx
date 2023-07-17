@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Taskform from './Taskform';
 import Tasks from './Tasks';
-
 import Initial_tasks from '@/TasksList';
 
 
@@ -24,7 +23,6 @@ function Body(props) {
       <Taskform
         onSaveTaskData = {saveTaskDataHandler}
         />
-
       <Tasks items={tasks} />
     </div>
 
