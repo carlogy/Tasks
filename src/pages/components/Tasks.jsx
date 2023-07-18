@@ -1,16 +1,10 @@
 import React, { useState } from "react";
 import Card from './Card';
+import ListHeader from './ListHeader';
 import TaskItem from './TaskItem';
-import ListHeader from './ListHeader'
-
-
-
-
 
 
 const Tasks = (props) => {
-
-
 
     return (
         <div>

@@ -15,9 +15,9 @@ return (
             <h2 className="pl-2"
             >{props.title}</h2>
         </div>
-        {/* <div className='mx-auto'>
-            <h2>{props.notes}</h2>
-        </div> */}
+            {/* <div className='mx-auto'>
+                <h2>{props.notes}</h2>
+            </div> */}
         <div className='flex-auto text-center'>
             <h2 className='pr-2'
              onClick={clickHandler}
@@ -28,4 +28,4 @@ return (
 );
 }
 
-export default TaskItem
+export default TaskItem;
