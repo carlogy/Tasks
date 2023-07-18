@@ -8,7 +8,7 @@ const TaskItem = (props) => {
 
     const [percent, setPercent] = useState(props.percent);
 
-    const clickHandler = (event) => {
+    const clickHandler = () => {
         setPercent('Updated');
     };
 
