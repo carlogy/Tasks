@@ -5,7 +5,7 @@ import Initial_tasks from '@/TasksList';
 
 
 
-function Body(props) {
+function Body() {
 
   const [tasks, setTasks] = useState(Initial_tasks);
 
@@ -13,6 +13,7 @@ function Body(props) {
     setTasks((prevTasks) => {
       console.log("prevTasks:" ,prevTasks);
       console.log("task", task);
+      console.log(tasks)
       return[...prevTasks, task];
     });
   };

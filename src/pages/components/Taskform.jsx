@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useState } from 'react';
-import tasks from '../../TasksList';
+
 
 
 const Taskform = (props) => {
@@ -32,9 +32,6 @@ const percentHandler = (event) => {
     return {...prevUserInput, enteredPercentage: event.target.value}
   });
 };
-
-// const [taskList , updateTaskList] = useState({});
-
 
 const submitHandler = (event) => {
   event.preventDefault();
