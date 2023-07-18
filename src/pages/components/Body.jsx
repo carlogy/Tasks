@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import Initial_tasks from '@/TasksList';
 import Taskform from './Taskform';
 import Tasks from './Tasks';
-import Initial_tasks from '@/TasksList';
+
 
 
 
@@ -11,9 +12,9 @@ function Body() {
 
   const saveTaskDataHandler = (task) => {
     setTasks((prevTasks) => {
-      console.log("prevTasks:" ,prevTasks);
-      console.log("task", task);
-      console.log(tasks)
+      // console.log("prevTasks:" ,prevTasks);
+      // console.log("task", task);
+      // console.log(tasks)
       return[...prevTasks, task];
     });
   };

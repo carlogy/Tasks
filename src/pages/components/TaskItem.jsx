@@ -1,8 +1,4 @@
 import React, { useState } from "react";
-import Card from "./Card";
-import tasks from "@/TasksList";
-
-
 
 const TaskItem = (props) => {
 
