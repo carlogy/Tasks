@@ -10,6 +10,7 @@ function Body() {
 
   const [tasks, setTasks] = useState(Initial_tasks);
 
+
   const saveTaskDataHandler = (task) => {
     setTasks((prevTasks) => {
       // console.log("prevTasks:" ,prevTasks);
@@ -23,8 +24,7 @@ function Body() {
 
     <div className='container mx-auto'>
       <Taskform
-        onSaveTaskData = {saveTaskDataHandler}
-        />
+        onSaveTaskData = {saveTaskDataHandler} />
       <Tasks items={tasks} />
     </div>
 

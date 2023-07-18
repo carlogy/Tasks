@@ -10,7 +10,7 @@ const Tasks = (props) => {
         <div>
         <Card>
          <ListHeader />
-        {props.items.map(task => (
+        {props.items?.map(task => (
             <TaskItem
                 key={task.id}
                 title={task.title}
