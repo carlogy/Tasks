@@ -13,6 +13,7 @@ const Tasks = (props) => {
 
 
     return (
+        <div>
         <Card>
          <ListHeader />
          {props.items.map(task => (
@@ -22,7 +23,8 @@ const Tasks = (props) => {
                 percent={task.percent} />
          ))}
         </Card>
-    )
+        </div>
+    );
 }
 
 export default Tasks;
