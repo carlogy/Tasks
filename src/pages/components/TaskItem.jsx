@@ -10,10 +10,9 @@ const TaskItem = (props) => {
 
     const [crossOut, setCrossOut] = useState(false);
 
-
 return (
 
-        <div className='flex  text-blue-600 mt-4'>
+        <div className='flex  text-med-blue mt-4'>
         {/* <div>
             <input
             type="checkbox"
@@ -34,14 +33,17 @@ return (
 
             >{percent}%</h2>
         </div> */}
-        <div className="flex-end pr-1">
+        <div className="flex-end pr-1 pb-1">
         <button onClick={() => setCrossOut((crossedOut) => !crossedOut)}
-                className="bg-blue-600
-                           border-blue-600
+                className="bg-med-blue
+                           border-med-blue
                            border
                            rounded
-                           text-white
-                           hover:bg-blue-800">
+                           text-cream
+                           hover:border-dark-blue
+                           transition ease-in-out
+                           delay-75
+                           ">
         Complete</button>
         </div>
         </div>

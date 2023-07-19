@@ -4,8 +4,6 @@ import Taskform from './Taskform';
 import Tasks from './Tasks';
 
 
-
-
 function Body() {
 
   const [tasks, setTasks] = useState(Initial_tasks);
@@ -20,9 +18,20 @@ function Body() {
     });
   };
 
+
+
+
+
+
   return (
 
-    <div className='container mx-auto'>
+    <div className='container
+                    mx-auto
+                    bg-light-blue
+                    border-light-blue
+                    rounded
+                    shadow-lg
+                    px-1'>
       <Taskform
         onSaveTaskData = {saveTaskDataHandler} />
       <Tasks items={tasks} />

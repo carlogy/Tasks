@@ -4,6 +4,8 @@ import ListHeader from './ListHeader';
 import TaskItem from './TaskItem';
 
 
+
+
 const Tasks = (props) => {
 
     return (
@@ -11,9 +13,10 @@ const Tasks = (props) => {
         <Card>
          <ListHeader />
         {props.items?.map(task => (
-            <TaskItem
+                <TaskItem
                 key={task.id}
                 title={task.title} />
+
                 // percent={task.percent} />
          ))}
         </Card>

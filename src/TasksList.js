@@ -7,7 +7,7 @@ const Initial_tasks = [{
   },
   {
     id: 1,
-    title: "Submit click completed to cross out your completed task.",
+    title: "Click completed to cross out a completed task.",
     percent: 0,
   },
   {

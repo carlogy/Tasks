@@ -24,11 +24,11 @@ const titleHandler = (event) => {
 //    })
 // }
 
-const percentHandler = (event) => {
-  setUserInput((prevUserInput) => {
-    return {...prevUserInput, enteredPercentage: event.target.value}
-  });
-};
+// const percentHandler = (event) => {
+//   setUserInput((prevUserInput) => {
+//     return {...prevUserInput, enteredPercentage: event.target.value}
+//   });
+// };
 
 const submitHandler = (event) => {
   event.preventDefault();
@@ -61,13 +61,22 @@ const submitHandler = (event) => {
   };
 
   return (
-    <div className=' bg-blue-600 border
-                    border-blue-600
-                    text-white rounded '>
+    <div className='border
+                    bg-med-blue
+                    border-med-blue
+                    text-cream
+                    rounded
+                    shadow-lg
+                    relative
+                    top-1
+                    mb-2
+                    align-middle
+                    focus:outline-double
+                    '>
         <form onSubmit={submitHandler}
-        className='container mx-auto flex m-1'>
-            <div className='flex-auto align-middle '>
-            <label className='pl-2  align-middle'>New Task : </label>
+        className='container mx-auto flex mt-4 p-1 '>
+            <div className='flex-auto align-middle p-1'>
+            <label className='pl-2'>New Task: </label>
             <input
                   type='text'
                   id='task'
@@ -77,13 +86,15 @@ const submitHandler = (event) => {
                   className='border
                              border-solid
                              rounded
-                           border-white ml-1s
-                           text-blue-600
-                           hover:border-blue-700
-                           px-1
+                           border-cream
+                           text-med-blue
+                           hover:border-dark-blue
+                           px-2
                            m-2
                            w-11/12
                            align-middle
+                           shadow-md
+                           transition ease-in-out
                            '
                   />
             </div>
@@ -110,16 +121,19 @@ const submitHandler = (event) => {
                     />
           </div> */}
           <div className='rounded
-                          text-center
-                         bg-white border
-                         border-white
-                         text-blue-600
-                         m-2
+                         bg-cream border
+                         border-cream
+                         text-med-blue
+                         mb-3
+                         mr-2
                          flex-shrink
-                         pr-2
-                         align-middle'>
+                         align-middle
+                         hover:border-med-blue
+                         shadow-md
+                         '>
             <button  type='submit'
-            className='font-bold hover:text-blue-800 pl-1'>Add Task</button>
+            className='font-bold text-center p-3'>Add Task</button>
+
             </div>
 
         </form>
