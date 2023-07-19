@@ -7,12 +7,12 @@ const Initial_tasks = [{
   },
   {
     id: 1,
-    title: "Task #2 when submit need to add task to an array.",
+    title: "Submit click completed to cross out your completed task.",
     percent: 0,
   },
   {
     id: 2,
-    title: "This is 3rd todo",
+    title: "Get started!",
     percent: 25,
   }
 ]

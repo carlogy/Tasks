@@ -13,8 +13,8 @@ const Tasks = (props) => {
         {props.items?.map(task => (
             <TaskItem
                 key={task.id}
-                title={task.title}
-                percent={task.percent} />
+                title={task.title} />
+                // percent={task.percent} />
          ))}
         </Card>
         </div>

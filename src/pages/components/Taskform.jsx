@@ -66,9 +66,8 @@ const submitHandler = (event) => {
                     text-white rounded '>
         <form onSubmit={submitHandler}
         className='container mx-auto flex m-1'>
-            <div className='flex-auto'>
-            <label className='pl-2'
-            >Task Name: </label>
+            <div className='flex-auto align-middle '>
+            <label className='pl-2  align-middle'>New Task : </label>
             <input
                   type='text'
                   id='task'
@@ -79,10 +78,13 @@ const submitHandler = (event) => {
                              border-solid
                              rounded
                            border-white ml-1s
-                           text-black
+                           text-blue-600
                            hover:border-blue-700
                            px-1
-                           mt-1'
+                           m-2
+                           w-11/12
+                           align-middle
+                           '
                   />
             </div>
             {/* <div className='flex-auto '>
@@ -94,7 +96,7 @@ const submitHandler = (event) => {
                         onChange={noteHandler}
                         className='border border-solid rounded ml-1 text-black  hover:border-blue-700 hover:transition-shadow px-1s' />
             </div> */}
-            <div className='flex-auto pt-1 '>
+            {/* <div className='flex-auto pt-1 '>
             <label className='align-middle'
             >Percentage completed: </label>
             <input type='range'
@@ -106,15 +108,18 @@ const submitHandler = (event) => {
                     onChange={percentHandler}
                     className='ml-1 hover:transition-shadow align-middle'
                     />
-          </div>
-          <div className='rounded text-center
+          </div> */}
+          <div className='rounded
+                          text-center
                          bg-white border
                          border-white
                          text-blue-600
                          m-2
-                         flex-auto pr-2'>
+                         flex-shrink
+                         pr-2
+                         align-middle'>
             <button  type='submit'
-            className='font-bold hover:text-blue-800'>Add Task</button>
+            className='font-bold hover:text-blue-800 pl-1'>Add Task</button>
             </div>
 
         </form>
